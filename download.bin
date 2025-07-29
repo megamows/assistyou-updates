@@ -1,0 +1,4 @@
+# Dans PowerShell
+$data = New-Object byte[] (10*1024*1024)
+(New-Object Random).NextBytes($data)
+[IO.File]::WriteAllBytes("download.bin", $data)
